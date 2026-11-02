@@ -1,0 +1,22 @@
+{
+  "titre": "Maison <em>Ndolé</em>",
+  "type": "Site vitrine · Restaurant",
+  "sous_titre": "Design, développement, réservation en ligne",
+  "couleur": "#b5532f",
+  "graine": 1,
+  "voix": [[3.4, "Maison Ndolé, un site vitrine pensé pour remplir les tables,"], [11.5, "une carte claire, qui donne faim,"], [17.5, "et une réservation en ligne, confirmée en quelques secondes."]],
+  "etapes": [
+    {"t": "wait", "ms": 600},
+    {"t": "scroll", "y": 980, "ms": 2200, "pause": 500},
+    {"t": "scroll", "y": 1820, "ms": 1800, "pause": 300},
+    {"t": "click", "sel": "#tabs button:nth-child(1)", "pause": 900},
+    {"t": "click", "sel": "#tabs button:nth-child(3)", "pause": 900},
+    {"t": "eval", "js": "document.querySelector('#reserver').scrollIntoView({behavior:'smooth'})", "pause": 1300},
+    {"t": "type", "sel": "#nom", "text": "Clarisse Ngo", "delay": 40, "pause": 200},
+    {"t": "type", "sel": "#tel", "text": "699123456", "delay": 40, "pause": 200},
+    {"t": "eval", "js": "const d=new Date();d.setDate(d.getDate()+((6-d.getDay()+7)%7||7));const i=document.querySelector('#date');i.value=d.toISOString().slice(0,10);i.dispatchEvent(new Event('change'))", "pause": 300},
+    {"t": "click", "sel": "#covers button:nth-child(4)", "pause": 300},
+    {"t": "click", "sel": "#slots button:not([disabled]):nth-child(n+6)", "pause": 300},
+    {"t": "click", "sel": "#form button[type=submit]", "pause": 1500}
+  ]
+}

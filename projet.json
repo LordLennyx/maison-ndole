@@ -1,0 +1,16 @@
+{
+  "repo": "maison-ndole",
+  "nom": "Maison Ndolé",
+  "type": "Site vitrine · Restaurant",
+  "categorie": "Sites web",
+  "resume": "Site vitrine d'une table camerounaise contemporaine à Douala : identité, carte interactive et réservation en ligne.",
+  "fonctions": [
+    "Illustration d'assiette générée en SVG (unique, légère, animée)",
+    "Carte du restaurant par onglets, données séparées du gabarit",
+    "Réservation : couverts, créneaux disponibles selon la date, validation du numéro camerounais, fermeture du lundi",
+    "Navigation fixe, menu mobile, apparitions au défilement, accessibilité (rôles ARIA, mouvement réduit)",
+    "Aucune dépendance : un seul fichier HTML, chargement instantané"
+  ],
+  "stack": "HTML, CSS, JavaScript natif, SVG",
+  "extra": {"Typographies": "Young Serif, Hanken Grotesk", "Poids": "moins de 40 Ko hors polices"}
+}

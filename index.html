@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maison Ndolé — Table camerounaise contemporaine, Douala</title>
+<meta name="description" content="Maison Ndolé, Bonapriso, Douala. Cuisine camerounaise de saison, produits de Kribi et des hauts plateaux de l'Ouest. Réservation en ligne.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%231f3a2e'/%3E%3Cpath d='M9 22c3-9 8-13 14-13-1 7-6 12-14 13z' fill='%23e9c46a'/%3E%3C/svg%3E">
+<style>
+:root{--cream:#f5efe3;--paper:#fbf8f1;--green:#1f3a2e;--leaf:#2f5d45;--clay:#b5532f;--gold:#d9a441;--ink:#1d1b16;--mute:#6b665b;--line:#d9d0bd}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font:400 17px/1.6 'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Young Serif',Georgia,serif;font-weight:400;letter-spacing:-.01em}
+a{color:inherit}
+img,svg{display:block}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.5em;border-radius:100px;background:var(--green);color:var(--cream);text-decoration:none;font-weight:600;font-size:15px;border:0;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{background:var(--clay);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--green);box-shadow:inset 0 0 0 1.5px var(--green)}
+.btn.ghost:hover{background:var(--green);color:var(--cream)}
+.eyebrow{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);font-weight:600}
+
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:20;transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(245,239,227,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo b{font:400 22px 'Young Serif',serif}
+.logo small{display:block;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.links{display:flex;gap:34px;font-weight:500;font-size:15px}
+.links a{text-decoration:none;position:relative}
+.links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1.5px;background:var(--clay);transition:right .3s}
+.links a:hover::after{right:0}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;height:2px;width:24px;background:var(--ink);margin:5px auto;transition:.3s}
+
+/* hero */
+.hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:110px 0 60px}
+.hero h1{font-size:clamp(48px,6.4vw,92px);line-height:.95;margin:22px 0 28px}
+.hero h1 i{font-style:normal;color:var(--clay)}
+.hero p.lead{font-size:19px;max-width:30em;color:#3d3a32}
+.hero .cta{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
+.hero .meta{display:flex;gap:36px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+.hero .meta b{display:block;font:400 26px 'Young Serif',serif;color:var(--ink)}
+.plate-wrap{position:relative;aspect-ratio:1}
+#plate{width:100%;height:100%;animation:spin 120s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tag{position:absolute;background:var(--paper);border-radius:14px;padding:12px 16px;box-shadow:0 12px 30px -12px rgba(31,58,46,.35);font-size:13.5px;line-height:1.35}
+.tag b{display:block;font:400 16px 'Young Serif',serif}
+.tag.t1{top:9%;left:-4%}.tag.t2{bottom:12%;right:-2%}
+
+/* bande */
+.band{background:var(--green);color:var(--cream);overflow:hidden;padding:22px 0}
+.marquee{display:flex;gap:48px;white-space:nowrap;animation:mq 38s linear infinite;font:400 28px 'Young Serif',serif}
+.marquee span{display:inline-flex;align-items:center;gap:48px}
+.marquee span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:120px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+.head h2{font-size:clamp(38px,4.6vw,62px);line-height:1.02;margin-top:14px;max-width:13em}
+
+/* histoire */
+.story{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:center}
+.story .art{background:var(--green);border-radius:28px;aspect-ratio:4/5;position:relative;overflow:hidden}
+.story .art svg{position:absolute;inset:0;width:100%;height:100%}
+.story h2{font-size:clamp(34px,4vw,54px);line-height:1.05;margin:14px 0 26px}
+.story p{color:#3d3a32;margin-bottom:18px;max-width:34em}
+.sig{display:flex;align-items:center;gap:16px;margin-top:30px}
+.sig .av{width:54px;height:54px;border-radius:50%;background:var(--clay);color:var(--cream);display:grid;place-items:center;font:400 20px 'Young Serif',serif}
+.sig small{color:var(--mute);display:block}
+
+/* menu */
+#carte{background:var(--paper)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tabs button{font:600 14px 'Hanken Grotesk',sans-serif;padding:.7em 1.2em;border-radius:100px;border:1.5px solid var(--line);background:transparent;cursor:pointer;color:var(--ink);transition:.2s}
+.tabs button[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:0 70px}
+.dish{display:grid;grid-template-columns:1fr auto;gap:4px 24px;padding:26px 0;border-bottom:1px dashed var(--line);animation:fade .5s both}
+.dish h3{font-size:22px;display:flex;align-items:center;gap:10px}
+.dish .p{font:400 20px 'Young Serif',serif;color:var(--green)}
+.dish p{grid-column:1/-1;color:var(--mute);font-size:15.5px;max-width:30em}
+.pill{font:600 10.5px 'Hanken Grotesk';letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:#f1dfc9;color:var(--clay)}
+.pill.v{background:#dde8dc;color:var(--leaf)}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}}
+.menu-note{margin-top:40px;font-size:14px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+/* moments */
+.moments{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.moment{border-radius:24px;padding:34px;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.moment:nth-child(1){background:#e9c46a}.moment:nth-child(2){background:var(--clay);color:var(--cream)}.moment:nth-child(3){background:var(--leaf);color:var(--cream)}
+.moment h3{font-size:30px;line-height:1.1}
+.moment .h{font-weight:600;font-size:14px;letter-spacing:.06em}
+.moment svg{position:absolute;right:-30px;top:-30px;width:180px;opacity:.25}
+
+/* avis */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+blockquote{font:400 22px/1.4 'Young Serif',serif}
+blockquote footer{font:500 14px 'Hanken Grotesk';color:var(--mute);margin-top:18px}
+.stars{color:var(--gold);letter-spacing:3px;margin-bottom:14px;font-size:14px}
+
+/* réservation */
+#reserver{background:var(--green);color:var(--cream)}
+.resa{display:grid;grid-template-columns:5fr 6fr;gap:80px}
+.resa h2{font-size:clamp(38px,4.6vw,62px);line-height:1.02;margin:14px 0 24px}
+.resa .eyebrow{color:var(--gold)}
+.infos{display:grid;gap:22px;margin-top:40px;font-size:15.5px}
+.infos b{display:block;font:400 18px 'Young Serif',serif;color:var(--gold);margin-bottom:2px}
+form{background:var(--paper);color:var(--ink);border-radius:28px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{font-size:13px;font-weight:600;display:grid;gap:7px}
+input,select,textarea{font:inherit;font-size:16px;padding:.8em 1em;border-radius:12px;border:1.5px solid var(--line);background:#fff;color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--leaf);box-shadow:0 0 0 4px rgba(47,93,69,.12)}
+.full{grid-column:1/-1}
+.covers{display:flex;gap:8px;flex-wrap:wrap}
+.covers button{width:46px;height:46px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font:600 15px 'Hanken Grotesk';cursor:pointer}
+.covers button.on{background:var(--green);color:var(--cream);border-color:var(--green)}
+.slots{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.slots button{padding:.6em 0;border-radius:10px;border:1.5px solid var(--line);background:#fff;font:600 14px 'Hanken Grotesk';cursor:pointer}
+.slots button.on{background:var(--clay);border-color:var(--clay);color:#fff}
+.slots button:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.err{color:var(--clay);font-size:13px;min-height:1em}
+form .btn{justify-content:center;padding:1.1em}
+.ok{grid-column:1/-1;text-align:center;padding:30px 10px;display:none}
+.ok.show{display:block;animation:fade .5s}
+.ok .check{width:70px;height:70px;border-radius:50%;background:var(--leaf);margin:0 auto 20px;display:grid;place-items:center}
+.ok h3{font-size:32px;margin-bottom:10px}
+.ok code{font:600 15px ui-monospace,monospace;background:#efe6d3;padding:4px 10px;border-radius:8px}
+
+footer.site{background:var(--ink);color:#bdb6a6;padding:70px 0 40px;font-size:14.5px}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.fgrid h4{color:var(--cream);font:400 17px 'Young Serif',serif;margin-bottom:14px}
+.fgrid a{display:block;text-decoration:none;margin-bottom:6px}
+.fgrid a:hover{color:var(--gold)}
+.legal{margin-top:60px;padding-top:24px;border-top:1px solid #34312a;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px}
+
+[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+[data-reveal].in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .links{position:fixed;inset:76px 0 auto;flex-direction:column;background:var(--cream);padding:30px 24px;gap:22px;font-size:20px;transform:translateY(-130%);transition:transform .4s;box-shadow:0 20px 30px -20px rgba(0,0,0,.2)}
+  .links:not(.open){visibility:hidden}
+  .links.open{transform:none}
+  .hero .meta b{font-size:21px}
+  .burger{display:block}
+  .nav .btn{display:none}
+  .hero,.story,.resa{grid-template-columns:1fr;gap:48px}
+  .hero{padding-top:100px}
+  .plate-wrap{max-width:440px;width:100%;margin:auto}
+  .tag.t1{left:0}.tag.t2{right:0}
+  .menu,.moments,.quotes{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+  section{padding:84px 0}
+  form{grid-template-columns:1fr;padding:26px}
+  .slots{grid-template-columns:repeat(3,1fr)}
+  .hero .meta{gap:22px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo" href="#" aria-label="Maison Ndolé, accueil">
+      <svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#1f3a2e"/><path d="M11 28c4-11 10-16 18-16-1 9-8 15-18 16z" fill="#e9c46a"/><path d="M12 27c4-5 8-8 13-11" stroke="#1f3a2e" stroke-width="1.4" fill="none"/></svg>
+      <span><b>Maison Ndolé</b><small>Bonapriso · Douala</small></span>
+    </a>
+    <nav class="links" id="links">
+      <a href="#histoire">La maison</a><a href="#carte">La carte</a><a href="#moments">Moments</a><a href="#reserver">Nous trouver</a>
+    </nav>
+    <a class="btn" href="#reserver">Réserver une table</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <span class="eyebrow">Table camerounaise · depuis 2019</span>
+    <h1>Le goût de chez nous, <i>servi</i> avec soin.</h1>
+    <p class="lead">Des recettes de nos grands-mères, retravaillées avec les produits du jour : crevettes de Kribi, poivre de Penja, feuilles de ndolé lavées trois fois, comme il se doit.</p>
+    <div class="cta"><a class="btn" href="#reserver">Réserver une table</a><a class="btn ghost" href="#carte">Voir la carte</a></div>
+    <div class="meta"><div><b>4,8 / 5</b>1 240 avis clients</div><div><b>42</b>couverts</div><div><b>Mar — Dim</b>12 h – 23 h</div></div>
+  </div>
+  <div class="plate-wrap" data-reveal>
+    <svg id="plate" viewBox="0 0 500 500" aria-label="Illustration d'une assiette de ndolé"></svg>
+    <div class="tag t1"><b>Ndolé aux crevettes</b>Le plat signature, 8 500 F</div>
+    <div class="tag t2"><b>Poivre de Penja</b>IGP, broyé à la commande</div>
+  </div>
+</div>
+
+<div class="band" aria-hidden="true"><div class="marquee"><span>Ndolé</span><span>Poulet DG</span><span>Eru</span><span>Mbongo tchobi</span><span>Koki</span><span>Sanga</span><span>Bissap</span><span>Ndolé</span><span>Poulet DG</span><span>Eru</span><span>Mbongo tchobi</span><span>Koki</span><span>Sanga</span><span>Bissap</span></div></div>
+
+<section id="histoire">
+  <div class="wrap story">
+    <div class="art" data-reveal><svg viewBox="0 0 400 500" id="leaves" aria-hidden="true"></svg></div>
+    <div data-reveal>
+      <span class="eyebrow">La maison</span>
+      <h2>Une cuisine de famille, tenue comme une grande table.</h2>
+      <p>Tout a commencé dans la cuisine de Mama Régine, à Akwa, où l'on préparait le ndolé du dimanche dès le samedi soir. Sa petite-fille Esther a gardé les gestes et le temps long, puis elle a ouvert les portes.</p>
+      <p>Ici, rien n'est pressé. Les arachides sont grillées le matin, le mbongo est pilé à la main, et la carte change avec ce que les pêcheurs de Kribi et les maraîchers de Dschang nous apportent.</p>
+      <div class="sig"><div class="av">E</div><div><b class="serif">Esther Mbappé-Ewane</b><small>Cheffe et fondatrice</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="carte">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">La carte · novembre</span><h2>De saison, et toujours généreux.</h2></div>
+      <div class="tabs" role="tablist" id="tabs"></div>
+    </div>
+    <div class="menu" id="menu" role="tabpanel"></div>
+    <div class="menu-note"><span><span class="pill v">Végétal</span> &nbsp;sans produit animal &nbsp; <span class="pill">Signature</span> &nbsp;recette de la maison</span><span>Prix nets en francs CFA, service compris.</span></div>
+  </div>
+</section>
+
+<section id="moments">
+  <div class="wrap">
+    <div class="head"><div><span class="eyebrow">Moments</span><h2>Trois façons de passer à table.</h2></div></div>
+    <div class="moments">
+      <article class="moment" data-reveal><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/></svg><span class="h">Mar — Ven · 12 h – 15 h</span><div><h3>Le déjeuner du marché</h3><p>Entrée, plat, jus frais. 9 500 F, servi en 45 minutes.</p></div></article>
+      <article class="moment" data-reveal><svg viewBox="0 0 100 100"><path d="M10 90 50 10 90 90z" fill="none" stroke="currentColor" stroke-width="6"/></svg><span class="h">Sam — Dim · 10 h – 14 h</span><div><h3>Le brunch BHB</h3><p>Beignets, haricots, bouillie de maïs, et tout ce qui va avec.</p></div></article>
+      <article class="moment" data-reveal><svg viewBox="0 0 100 100"><rect x="12" y="12" width="76" height="76" rx="18" fill="none" stroke="currentColor" stroke-width="6"/></svg><span class="h">Sur demande · 12 à 42 pers.</span><div><h3>La table privée</h3><p>Mariages, dots, anniversaires, repas d'entreprise. Menu sur mesure.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap quotes">
+    <blockquote data-reveal><div class="stars">★★★★★</div>« Le meilleur ndolé que j'ai mangé hors de la maison de ma mère. Et je ne dis pas ça à la légère. »<footer>Armand T. · Google</footer></blockquote>
+    <blockquote data-reveal><div class="stars">★★★★★</div>« Service attentif, cadre calme, et ce mbongo tchobi… On est revenus le samedi suivant. »<footer>Clarisse N. · TripAdvisor</footer></blockquote>
+    <blockquote data-reveal><div class="stars">★★★★★</div>« Nous y avons fêté nos fiançailles à 30. Tout était parfait, jusqu'au dernier bissap. »<footer>Famille Kamga · Facebook</footer></blockquote>
+  </div>
+</section>
+
+<section id="reserver">
+  <div class="wrap resa">
+    <div>
+      <span class="eyebrow">Réservation</span>
+      <h2>Votre table vous attend.</h2>
+      <p>Confirmation immédiate. Pour plus de 10 personnes, nous vous rappelons dans l'heure.</p>
+      <div class="infos">
+        <div><b>Adresse</b>Rue Joss prolongée, face à l'école Saint-Michel, Bonapriso, Douala</div>
+        <div><b>Horaires</b>Mardi au dimanche, de 12 h à 23 h · fermé le lundi</div>
+        <div><b>Téléphone</b>+237 6 99 00 00 00 (exemple)</div>
+      </div>
+    </div>
+    <form id="form" novalidate>
+      <label>Nom complet<input id="nom" autocomplete="name" placeholder="Votre nom"></label>
+      <label>Téléphone<input id="tel" type="tel" autocomplete="tel" placeholder="6 XX XX XX XX"></label>
+      <label>Date<input id="date" type="date"></label>
+      <label>Occasion<select id="occ"><option>Repas simple</option><option>Anniversaire</option><option>Affaires</option><option>Rendez-vous galant</option><option>Fête de famille</option></select></label>
+      <div class="full"><label style="margin-bottom:8px">Nombre de personnes</label><div class="covers" id="covers"></div></div>
+      <div class="full"><label style="margin-bottom:8px">Heure d'arrivée</label><div class="slots" id="slots"></div></div>
+      <label class="full">Une précision ?<textarea id="note" rows="2" placeholder="Allergie, chaise bébé, gâteau à apporter…"></textarea></label>
+      <div class="full err" id="err" role="alert"></div>
+      <button class="btn full" type="submit">Confirmer la réservation</button>
+      <div class="ok" id="ok">
+        <div class="check"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#f5efe3" stroke-width="2.5"><path d="M5 12.5 10 17 19 7"/></svg></div>
+        <h3>C'est noté.</h3><p id="okTxt"></p><p style="margin-top:16px">Référence <code id="ref"></code></p>
+        <button type="button" class="btn ghost" style="margin-top:24px" id="again">Nouvelle réservation</button>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div><h4>Maison Ndolé</h4><p>Table camerounaise contemporaine. Produits du pays, cuisine du temps long.</p></div>
+      <div><h4>Visiter</h4><a href="#carte">La carte</a><a href="#moments">Brunch</a><a href="#moments">Table privée</a></div>
+      <div><h4>Suivre</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
+      <div><h4>Contact</h4><a href="#reserver">Réserver</a><a href="#">Recrutement</a><a href="#">Presse</a></div>
+    </div>
+    <div class="legal"><span>© 2026 Maison Ndolé — projet de démonstration</span><span>Conception &amp; développement : Njundiyimun Béchard</span></div>
+  </div>
+</footer>
+
+<script>
+// Générateur pseudo-aléatoire stable : l'illustration est identique à chaque visite
+const rnd=(s=>()=>(s=(s*16807)%2147483647)/2147483647)(42);
+const NS='http://www.w3.org/2000/svg';
+const el=(tag,attrs,parent)=>{const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);parent&&parent.appendChild(e);return e};
+const leafPath=(l,w)=>`M0 0 C ${w} ${-l*.3}, ${w} ${-l*.75}, 0 ${-l} C ${-w} ${-l*.75}, ${-w} ${-l*.3}, 0 0Z`;
+
+(function plate(){
+  const s=document.getElementById('plate');
+  el('circle',{cx:250,cy:250,r:236,fill:'#ece3d0'},s);
+  el('circle',{cx:250,cy:250,r:226,fill:'#fbf8f1'},s);
+  el('circle',{cx:250,cy:250,r:180,fill:'none',stroke:'#e2d8c3','stroke-width':2},s);
+  el('circle',{cx:250,cy:250,r:150,fill:'#2b4a37'},s);
+  const g=el('g',{},s);
+  const greens=['#2f5d45','#3b7052','#264d39','#4a8160','#1f3a2e'];
+  for(let i=0;i<150;i++){
+    const a=rnd()*Math.PI*2,r=Math.sqrt(rnd())*135,x=250+Math.cos(a)*r,y=250+Math.sin(a)*r;
+    el('path',{d:leafPath(14+rnd()*16,5+rnd()*5),fill:greens[i%5],transform:`translate(${x} ${y}) rotate(${rnd()*360})`,opacity:.9},g);
+  }
+  for(let i=0;i<70;i++){ // arachides écrasées
+    const a=rnd()*Math.PI*2,r=Math.sqrt(rnd())*130;
+    el('circle',{cx:250+Math.cos(a)*r,cy:250+Math.sin(a)*r,r:1.5+rnd()*2.2,fill:'#c9a46a',opacity:.8},g);
+  }
+  for(let i=0;i<7;i++){ // crevettes
+    const a=i/7*Math.PI*2+.3,r=70+rnd()*40,x=250+Math.cos(a)*r,y=250+Math.sin(a)*r;
+    const c=el('g',{transform:`translate(${x} ${y}) rotate(${a*57+90})`},g);
+    el('path',{d:'M-16 0 A16 16 0 1 1 10 -11',fill:'none',stroke:'#e76f51','stroke-width':9,'stroke-linecap':'round'},c);
+    el('path',{d:'M-16 0 A16 16 0 1 1 10 -11',fill:'none',stroke:'#f4a261','stroke-width':3,'stroke-linecap':'round','stroke-dasharray':'2 5'},c);
+  }
+  for(let i=0;i<9;i++){ // plantain mûr, en couronne
+    const a=i/9*Math.PI*2,x=250+Math.cos(a)*200,y=250+Math.sin(a)*200;
+    el('ellipse',{cx:x,cy:y,rx:17,ry:11,fill:'#e9a23b',transform:`rotate(${a*57} ${x} ${y})`},s);
+    el('ellipse',{cx:x,cy:y,rx:10,ry:5,fill:'#f6c768',transform:`rotate(${a*57} ${x} ${y})`},s);
+  }
+})();
+
+(function leaves(){
+  const s=document.getElementById('leaves');
+  const cols=['#2f5d45','#3b7052','#4a8160','#e9c46a','#b5532f'];
+  for(let i=0;i<26;i++){
+    const x=rnd()*400,y=80+rnd()*460,l=90+rnd()*150;
+    el('path',{d:leafPath(l,l*.28),fill:cols[i%5],opacity:i%5>2?.9:.75,transform:`translate(${x} ${y}) rotate(${-40+rnd()*80})`},s);
+  }
+  const t=el('text',{x:30,y:60,fill:'#f5efe3','font-family':'Young Serif','font-size':26},s);t.textContent='Akwa, 1987';
+})();
+
+// Carte
+const MENU={
+  'Entrées':[
+    ['Koki de haricots, piment doux','Gâteau de cornille vapeur en feuille de bananier, huile rouge, petite salade de cresson.','3 500','v'],
+    ['Accras de Kribi','Beignets de morue et crevettes, sauce piment-tomate maison.','4 000'],
+    ['Salade de plantain grillé','Plantain mûr braisé, avocat, oignon rouge mariné au citron vert, gingembre.','3 800','v'],
+    ['Soya de bœuf, poivre de Penja','Brochettes marinées au kankan, oignons, piment frais.','4 500'],
+  ],
+  'Plats':[
+    ['Ndolé aux crevettes de Kribi','Feuilles amères lavées trois fois, pâte d\'arachide, crevettes et bœuf. Miondo ou plantain.','8 500','s'],
+    ['Poulet DG, version maison','Poulet fermier, plantain mûr, carottes et haricots verts, tout sauté au wok.','9 000','s'],
+    ['Mbongo tchobi de bar','Poisson de mer, sauce noire aux épices pilées, bâton de manioc.','9 500'],
+    ['Eru et waterfufu','Eru, waterleaf, peau de bœuf et poisson fumé, comme à Kumba.','7 500'],
+    ['Sanga au maïs frais','Maïs, feuilles de morelle, jus de noix de palme. Plat de saison.','6 500','v'],
+    ['Taro sauce jaune','Taro pilé, sauce aux épices nkui et sel gemme. Le dimanche uniquement.','7 000'],
+  ],
+  'Desserts':[
+    ['Tarte coco-ananas de Njombé','Pâte sablée, crème de coco, ananas rôti au poivre blanc.','3 500','v'],
+    ['Glace au foléré','Sorbet d\'hibiscus, tuile au sésame.','3 000','v'],
+    ['Beignets soufflés, caramel de miel','Miel de l\'Adamaoua, fleur de sel.','2 800'],
+  ],
+  'Boissons':[
+    ['Bissap glacé','Hibiscus, menthe fraîche, une pointe de vanille.','1 500','v'],
+    ['Jus de gingembre','Pressé le matin, servi bien frais. Ça pique.','1 500','v'],
+    ['Café de l\'Ouest','Arabica des hauts plateaux, torréfié à Dschang.','1 800','v'],
+    ['Vin de palme du jour','Selon arrivage, servi en calebasse.','2 000'],
+  ]};
+const tabs=document.getElementById('tabs'),menu=document.getElementById('menu');
+function show(cat){
+  [...tabs.children].forEach(b=>b.setAttribute('aria-selected',b.textContent===cat));
+  menu.innerHTML=MENU[cat].map(([n,d,p,t],i)=>`<article class="dish" style="animation-delay:${i*60}ms"><h3>${n}${t==='s'?'<span class="pill">Signature</span>':t==='v'?'<span class="pill v">Végétal</span>':''}</h3><span class="p">${p} F</span><p>${d}</p></article>`).join('');
+}
+Object.keys(MENU).forEach(c=>{const b=document.createElement('button');b.textContent=c;b.setAttribute('role','tab');b.onclick=()=>show(c);tabs.appendChild(b)});
+show('Plats');
+
+// Réservation
+const covers=document.getElementById('covers'),slots=document.getElementById('slots');
+let nb=2,heure=null;
+for(let i=1;i<=8;i++){const b=document.createElement('button');b.type='button';b.textContent=i===8?'8+':i;b.className=i===2?'on':'';b.onclick=()=>{nb=i;[...covers.children].forEach(x=>x.classList.toggle('on',x===b))};covers.appendChild(b)}
+const date=document.getElementById('date');
+const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());
+date.min=today.toISOString().slice(0,10);
+function renderSlots(){
+  const h=['12:00','12:30','13:00','13:30','14:00','19:00','19:30','20:00','20:30','21:30'];
+  const seed=(date.value||'x').split('').reduce((a,c)=>a+c.charCodeAt(0),0);
+  slots.innerHTML='';heure=null;
+  h.forEach((t,i)=>{const b=document.createElement('button');b.type='button';b.textContent=t;b.disabled=(seed+i*7)%5===0;
+    b.onclick=()=>{heure=t;[...slots.children].forEach(x=>x.classList.toggle('on',x===b))};slots.appendChild(b)});
+}
+date.addEventListener('change',renderSlots);renderSlots();
+const form=document.getElementById('form'),err=document.getElementById('err'),ok=document.getElementById('ok');
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const nom=document.getElementById('nom').value.trim(),tel=document.getElementById('tel').value.replace(/\s/g,'');
+  const m=!nom?'Indiquez votre nom.':!/^(\+?237)?6\d{8}$/.test(tel)?'Numéro camerounais attendu : 6 suivi de 8 chiffres.':!date.value?'Choisissez une date.':new Date(date.value).getDay()===1?'Nous sommes fermés le lundi.':!heure?'Choisissez une heure d\'arrivée.':'';
+  err.textContent=m;if(m)return;
+  const d=new Date(date.value).toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});
+  document.getElementById('okTxt').textContent=`${nom.split(' ')[0]}, votre table pour ${nb===8?'8 personnes ou plus':nb+(nb>1?' personnes':' personne')} est réservée le ${d} à ${heure.replace(':',' h ')}. Un SMS de confirmation part au ${tel}.`;
+  document.getElementById('ref').textContent='MN-'+Math.random().toString(36).slice(2,7).toUpperCase();
+  [...form.children].forEach(c=>c!==ok&&(c.style.display='none'));ok.classList.add('show');
+});
+document.getElementById('again').onclick=()=>{[...form.children].forEach(c=>c.style.display='');ok.classList.remove('show');form.reset();renderSlots()};
+
+// Interface
+const header=document.getElementById('top');
+addEventListener('scroll',()=>header.classList.toggle('solid',scrollY>30),{passive:true});
+const burger=document.getElementById('burger'),links=document.getElementById('links');
+burger.onclick=()=>{const o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&(e.target.classList.add('in'),io.unobserve(e.target))),{threshold:.15});
+document.querySelectorAll('[data-reveal]').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
