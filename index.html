@@ -186,7 +186,7 @@ footer.site{background:var(--ink);color:#bdb6a6;padding:70px 0 40px;font-size:14
   </div>
   <div class="plate-wrap" data-reveal>
     <svg id="plate" viewBox="0 0 500 500" aria-label="Illustration d'une assiette de ndolé"></svg>
-    <div class="tag t1"><b>Ndolé aux crevettes</b>Le plat signature, 8 500 F</div>
+    <div class="tag t1"><b>Ndolé aux crevettes</b>Le plat signature, 24 €</div>
     <div class="tag t2"><b>Poivre de Penja</b>IGP, broyé à la commande</div>
   </div>
 </div>
@@ -213,7 +213,7 @@ footer.site{background:var(--ink);color:#bdb6a6;padding:70px 0 40px;font-size:14
       <div class="tabs" role="tablist" id="tabs"></div>
     </div>
     <div class="menu" id="menu" role="tabpanel"></div>
-    <div class="menu-note"><span><span class="pill v">Végétal</span> &nbsp;sans produit animal &nbsp; <span class="pill">Signature</span> &nbsp;recette de la maison</span><span>Prix nets en francs CFA, service compris.</span></div>
+    <div class="menu-note"><span><span class="pill v">Végétal</span> &nbsp;sans produit animal &nbsp; <span class="pill">Signature</span> &nbsp;recette de la maison</span><span>Prix nets en euros, service compris.</span></div>
   </div>
 </section>
 
@@ -221,7 +221,7 @@ footer.site{background:var(--ink);color:#bdb6a6;padding:70px 0 40px;font-size:14
   <div class="wrap">
     <div class="head"><div><span class="eyebrow">Moments</span><h2>Trois façons de passer à table.</h2></div></div>
     <div class="moments">
-      <article class="moment" data-reveal><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/></svg><span class="h">Mar — Ven · 12 h – 15 h</span><div><h3>Le déjeuner du marché</h3><p>Entrée, plat, jus frais. 9 500 F, servi en 45 minutes.</p></div></article>
+      <article class="moment" data-reveal><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/></svg><span class="h">Mar — Ven · 12 h – 15 h</span><div><h3>Le déjeuner du marché</h3><p>Entrée, plat, jus frais. 26 €, servi en 45 minutes.</p></div></article>
       <article class="moment" data-reveal><svg viewBox="0 0 100 100"><path d="M10 90 50 10 90 90z" fill="none" stroke="currentColor" stroke-width="6"/></svg><span class="h">Sam — Dim · 10 h – 14 h</span><div><h3>Le brunch BHB</h3><p>Beignets, haricots, bouillie de maïs, et tout ce qui va avec.</p></div></article>
       <article class="moment" data-reveal><svg viewBox="0 0 100 100"><rect x="12" y="12" width="76" height="76" rx="18" fill="none" stroke="currentColor" stroke-width="6"/></svg><span class="h">Sur demande · 12 à 42 pers.</span><div><h3>La table privée</h3><p>Mariages, dots, anniversaires, repas d'entreprise. Menu sur mesure.</p></div></article>
     </div>
@@ -245,7 +245,7 @@ footer.site{background:var(--ink);color:#bdb6a6;padding:70px 0 40px;font-size:14
       <div class="infos">
         <div><b>Adresse</b>Rue Joss prolongée, face à l'école Saint-Michel, Bonapriso, Douala</div>
         <div><b>Horaires</b>Mardi au dimanche, de 12 h à 23 h · fermé le lundi</div>
-        <div><b>Téléphone</b>+237 6 99 00 00 00 (exemple)</div>
+        <div><b>Téléphone</b>+33 1 42 00 00 00 (exemple)</div>
       </div>
     </div>
     <form id="form" novalidate>
@@ -329,34 +329,34 @@ const leafPath=(l,w)=>`M0 0 C ${w} ${-l*.3}, ${w} ${-l*.75}, 0 ${-l} C ${-w} ${-
 // Carte
 const MENU={
   'Entrées':[
-    ['Koki de haricots, piment doux','Gâteau de cornille vapeur en feuille de bananier, huile rouge, petite salade de cresson.','3 500','v'],
-    ['Accras de Kribi','Beignets de morue et crevettes, sauce piment-tomate maison.','4 000'],
-    ['Salade de plantain grillé','Plantain mûr braisé, avocat, oignon rouge mariné au citron vert, gingembre.','3 800','v'],
-    ['Soya de bœuf, poivre de Penja','Brochettes marinées au kankan, oignons, piment frais.','4 500'],
+    ['Koki de haricots, piment doux','Gâteau de cornille vapeur en feuille de bananier, huile rouge, petite salade de cresson.','9','v'],
+    ['Accras de Kribi','Beignets de morue et crevettes, sauce piment-tomate maison.','11'],
+    ['Salade de plantain grillé','Plantain mûr braisé, avocat, oignon rouge mariné au citron vert, gingembre.','10','v'],
+    ['Soya de bœuf, poivre de Penja','Brochettes marinées au kankan, oignons, piment frais.','12'],
   ],
   'Plats':[
-    ['Ndolé aux crevettes de Kribi','Feuilles amères lavées trois fois, pâte d\'arachide, crevettes et bœuf. Miondo ou plantain.','8 500','s'],
-    ['Poulet DG, version maison','Poulet fermier, plantain mûr, carottes et haricots verts, tout sauté au wok.','9 000','s'],
-    ['Mbongo tchobi de bar','Poisson de mer, sauce noire aux épices pilées, bâton de manioc.','9 500'],
-    ['Eru et waterfufu','Eru, waterleaf, peau de bœuf et poisson fumé, comme à Kumba.','7 500'],
-    ['Sanga au maïs frais','Maïs, feuilles de morelle, jus de noix de palme. Plat de saison.','6 500','v'],
-    ['Taro sauce jaune','Taro pilé, sauce aux épices nkui et sel gemme. Le dimanche uniquement.','7 000'],
+    ['Ndolé aux crevettes de Kribi','Feuilles amères lavées trois fois, pâte d\'arachide, crevettes et bœuf. Miondo ou plantain.','24','s'],
+    ['Poulet DG, version maison','Poulet fermier, plantain mûr, carottes et haricots verts, tout sauté au wok.','23','s'],
+    ['Mbongo tchobi de bar','Poisson de mer, sauce noire aux épices pilées, bâton de manioc.','26'],
+    ['Eru et waterfufu','Eru, waterleaf, peau de bœuf et poisson fumé, comme à Kumba.','21'],
+    ['Sanga au maïs frais','Maïs, feuilles de morelle, jus de noix de palme. Plat de saison.','19','v'],
+    ['Taro sauce jaune','Taro pilé, sauce aux épices nkui et sel gemme. Le dimanche uniquement.','20'],
   ],
   'Desserts':[
-    ['Tarte coco-ananas de Njombé','Pâte sablée, crème de coco, ananas rôti au poivre blanc.','3 500','v'],
-    ['Glace au foléré','Sorbet d\'hibiscus, tuile au sésame.','3 000','v'],
-    ['Beignets soufflés, caramel de miel','Miel de l\'Adamaoua, fleur de sel.','2 800'],
+    ['Tarte coco-ananas de Njombé','Pâte sablée, crème de coco, ananas rôti au poivre blanc.','9','v'],
+    ['Glace au foléré','Sorbet d\'hibiscus, tuile au sésame.','8','v'],
+    ['Beignets soufflés, caramel de miel','Miel de l\'Adamaoua, fleur de sel.','8'],
   ],
   'Boissons':[
-    ['Bissap glacé','Hibiscus, menthe fraîche, une pointe de vanille.','1 500','v'],
-    ['Jus de gingembre','Pressé le matin, servi bien frais. Ça pique.','1 500','v'],
-    ['Café de l\'Ouest','Arabica des hauts plateaux, torréfié à Dschang.','1 800','v'],
-    ['Vin de palme du jour','Selon arrivage, servi en calebasse.','2 000'],
+    ['Bissap glacé','Hibiscus, menthe fraîche, une pointe de vanille.','5','v'],
+    ['Jus de gingembre','Pressé le matin, servi bien frais. Ça pique.','5','v'],
+    ['Café de l\'Ouest','Arabica des hauts plateaux, torréfié à Dschang.','4','v'],
+    ['Vin de palme du jour','Selon arrivage, servi en calebasse.','6'],
   ]};
 const tabs=document.getElementById('tabs'),menu=document.getElementById('menu');
 function show(cat){
   [...tabs.children].forEach(b=>b.setAttribute('aria-selected',b.textContent===cat));
-  menu.innerHTML=MENU[cat].map(([n,d,p,t],i)=>`<article class="dish" style="animation-delay:${i*60}ms"><h3>${n}${t==='s'?'<span class="pill">Signature</span>':t==='v'?'<span class="pill v">Végétal</span>':''}</h3><span class="p">${p} F</span><p>${d}</p></article>`).join('');
+  menu.innerHTML=MENU[cat].map(([n,d,p,t],i)=>`<article class="dish" style="animation-delay:${i*60}ms"><h3>${n}${t==='s'?'<span class="pill">Signature</span>':t==='v'?'<span class="pill v">Végétal</span>':''}</h3><span class="p">${p} €</span><p>${d}</p></article>`).join('');
 }
 Object.keys(MENU).forEach(c=>{const b=document.createElement('button');b.textContent=c;b.setAttribute('role','tab');b.onclick=()=>show(c);tabs.appendChild(b)});
 show('Plats');
